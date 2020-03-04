@@ -159,9 +159,6 @@ namespace CustomWebApp.Models {
                 }
             }
         }
-        public (User, String) Tuple_Login(string user, string pass) {
-            return (Validate_Login(user, pass), this.LoginResult);
-        }
         public string LoginResult {
             get {
                 try {
