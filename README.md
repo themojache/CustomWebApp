@@ -17,7 +17,7 @@ ASP.NET Core (HTML5, CSS3). JQuery due to usage of Bootstrap.
 ## TODO
 1. Hash and Salt Password before being sent to the Database. (Store Hash and Salt, then verify the login by hashing an attempted pass with said salt).
 2. Add more form validation (check client side and server side). Ex: Create a Password Requirement (Atleast x characters long, with: a number, upper alpha, lower alpha, and special character).
-3. Harden and Test SQL Queries, ensure little threat of SQLi.
+3. Create more Secure SQL Queries and Test them, ensure little threat of SQLi.
 4. Update Front End.
 
 ## License
