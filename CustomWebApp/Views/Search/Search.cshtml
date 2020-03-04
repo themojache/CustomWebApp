@@ -6,13 +6,13 @@
 }
 <div>
     <h2>@Model.Message</h2>
-    @if(Model.Items == null || ((List<string>)Model.Items).Count() == 0) {
+    @if(Model.Items == null || ((List<Item>)Model.Items).Count() == 0) {
         <p>Zero results.</p>
     } else {
-        <table class="res">
-            <tr><th>Item</th></tr>
-            @foreach(string item in Model.Items) {
-                <tr><td>@Html.Raw(@item)</td></tr>
+        <table class="col-md-12">
+            <tr><th>Name</th><th>Price</th><th>Avalible Quantity</th><th>Purchase Options</th></tr>
+            @foreach(Item item in Model.Items) {
+                <tr><td>@item.GetName()@item.GetAvalibleUntil()</td><td>@item.GetPrice()</td><td>@item.GetQuantity()</td><td><label>Quantity: <input type="number" name="quantity" value="1" min="1" max="@item.GetQuantity()" /></label><button onclick="add_to_client_cart(this);">Add To Cart</button></td></tr>
             }
         </table>
     }

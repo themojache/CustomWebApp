@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace CustomWebApp.Models {
     public class Results {
         public string Message { get; set; }
-        public IEnumerable<string> Items { get; set; }
+        public IEnumerable<Item> Items { get; set; }
         //public override string ToString() {}
     }
 }

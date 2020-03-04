@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using CustomWebApp.Models;
 
 namespace CustomWebApp.Pages {
-    //[Route("search")]
     public class SearchController : Controller {
         public IActionResult Index() {
             return View("Search", new Results {
@@ -17,7 +16,8 @@ namespace CustomWebApp.Pages {
         public IActionResult Index(string q) {
             if(q == null || String.IsNullOrEmpty(q)) return Index();
             return View("Search", new Results {
-                Message = $"Searching for \"{q}\""
+                Message = $"Searching for \"{q}\"",
+                Items = Inventory.Search(q)
             });
         }
     }
