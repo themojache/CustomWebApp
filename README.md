@@ -5,9 +5,9 @@ ASP.NET Core Example
 CustomWebApp (either the sln or the csproj file). Run using ISS Express (Ctrl + F5, F5, or the Run button from withing Visual Studio).
 
 ## Features
-Three Controllers, two of which capture form information and would generally use it to make a database query. I utilize custom data types to allow it to be functional without a Database hit. Since speed is a priority above all else I have focused on that, hopefully this presents at least C# copentency (Difficult to present skills without a good use case).
+Three Controllers, two of which capture form information and would generally use it to make a database query. I utilize custom data types to allow it to be functional without a Database hit. Since speed is a priority above all else I have focused on that, hopefully this presents at least C# competency (Difficult to present skills without a good use case).
 
-1. Search funtionality (Search Controller).
+1. Search functionality (Search Controller).
 2. General logic of a login system (SigninController and User Model).
 3. Simple redirects to pages (HomeController).
 
