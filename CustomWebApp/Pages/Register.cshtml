@@ -1,0 +1,18 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+<div>
+    @if(@Model.Username == null) {
+        <form action="/sign/reg" method="post">
+            <input type="text" name="r_user" id="r_user" value="" placeholder="Username" />
+            <input type="password" name="r_pass" id="r_pass" value="" placeholder="Password" />
+            <input type="password" name="r_passC" id="r_passC" value="" placeholder="Confirm Password" />
+            @Html.AntiForgeryToken()
+            <input type="submit" value="Register" />
+        </form>
+    } else {
+        <p>You are currently logged in.</p>
+    }
+</div>

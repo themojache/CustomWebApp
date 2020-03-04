@@ -1,0 +1,17 @@
+﻿@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+<div>
+    @if(@Model.Username == null) {
+        <form action="/sign/in" method="post">
+            <input type="text" name="s_user" id="s_user" value="" placeholder="Username" />
+            <input type="password" name="s_pass" id="s_pass" value="" placeholder="Password" />
+            @Html.AntiForgeryToken()
+            <div><input type="checkbox" id="s_remember" name="s_remember" checked /> <label for="s_remember">Remember Me</label> <input type="submit" value="Log in" /></div>
+        </form>
+    } else {
+        <p>You are currently logged in.</p>
+    }
+</div>

@@ -1,0 +1,13 @@
+﻿@page
+@model AccountModel
+@{
+    ViewData["Title"] = "Account";
+}
+<h2>@ViewData["Title"]</h2>
+@if(@Model.Username == null) {
+    <p>Not Logged In, <a href="/Login">click here to login</a>.</p>
+} else {
+    <p>Username: @Model.Username</p>
+    <p>Hash Secret: @Model.Secret</p>
+    <p><a href="/sign/out">Sign Out</a></p>
+}
